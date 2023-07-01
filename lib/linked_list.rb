@@ -132,4 +132,31 @@ class LinkedList
       current.next = new_node
     end
   end
+
+  def remove_at(position)
+    if @head.nil?
+      puts "List is empty. Nothing to delete."
+      return
+    end
+
+    if position <= 0
+      @head = @head.next
+      if @head.nil?
+        @tail = nil
+      end
+    elsif position >= size - 1
+      current = @head
+      (size - 2).times do
+        current = current.next
+      end
+      current.next = nil
+      @tail = current
+    else
+      current = @head
+      (position - 1).times do
+        current = current.next
+      end
+      current.next = current.next.next
+    end
+  end
 end
