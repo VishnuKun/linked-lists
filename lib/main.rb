@@ -37,4 +37,4 @@ list.prepend(0)
 # p list.find(3)
 
 # represent list objects as strings
-puts list.to_s
+# puts list.to_s
