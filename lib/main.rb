@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require_relative 'linked_list'
-require 'pp'
 
 puts 'Linked List Initialized'
 
@@ -38,3 +37,10 @@ list.prepend(0)
 
 # represent list objects as strings
 # puts list.to_s
+
+# insert a new node at the given index with value given
+# p list.insert_at(4, 4)
+
+# remove a node at the given index
+list.remove_at(0)
+p list
